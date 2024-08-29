@@ -3,7 +3,7 @@ from llama_index.core.settings import Settings
 from typing import Dict
 import os
 
-DEFAULT_MODEL = "gpt-3.5-turbo"
+DEFAULT_MODEL = "gpt-4o-mini"
 DEFAULT_EMBEDDING_MODEL = "text-embedding-3-large"
 
 
