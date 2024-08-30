@@ -12,7 +12,7 @@ export default function Header() {
           height={150}
           priority
         />
-        <h1 className="text-center text-[2rem] md:text-[3rem] lg:text-[4.375rem] leading-none">
+        <h1 className="text-white text-center text-[1rem] md:text-[2.5rem] lg:text-[3.5rem] leading-none font-TenorSans">
           LDS Handbook Chatbot
         </h1>
       </div>

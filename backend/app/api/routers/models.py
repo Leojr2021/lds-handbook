@@ -74,6 +74,11 @@ class Message(BaseModel):
     content: str
     annotations: List[Annotation] | None = None
 
+    class Config:
+        # Excluir 'annotations' de la serialización
+        json_encoders = {
+            list: lambda v: None if v == [] else v  # Excluye annotations si está vacío o `None`
+        }
 
 class ChatData(BaseModel):
     messages: List[Message]
@@ -208,6 +213,11 @@ class Result(BaseModel):
     result: Message
     nodes: List[SourceNodes]
 
+    class Config:
+        # Excluir 'nodes' de la serialización
+        json_encoders = {
+            SourceNodes: lambda v: None  # Excluye nodos al serializar a JSON
+        }
 
 class ChatConfig(BaseModel):
     starter_questions: Optional[List[str]] = Field(

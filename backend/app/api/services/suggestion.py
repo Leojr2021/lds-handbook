@@ -7,11 +7,12 @@ from llama_index.core.settings import Settings
 from pydantic import BaseModel
 
 NEXT_QUESTIONS_SUGGESTION_PROMPT = PromptTemplate(
-    "You're a helpful assistant! Your task is to suggest the next question that user might ask. "
-    "\nHere is the conversation history"
-    "\n---------------------\n{conversation}\n---------------------"
-    "Given the conversation history, please give me {number_of_questions} questions that you might ask next!"
+    "You are a knowledgeable and respectful assistant specializing in the General Handbook of The Church of Jesus Christ of Latter-day Saints. Your task is to suggest the next question that the user might ask. "
+    "\nHere is the conversation history:"
+    "\n------------------------\n{conversation}\n------------------------"
+    "Based on the conversation history and the contents of the General Handbook, please provide {number_of_questions} questions that the user might ask next, ensuring they are relevant, clear, and helpful."
 )
+
 N_QUESTION_TO_GENERATE = 3
 
 

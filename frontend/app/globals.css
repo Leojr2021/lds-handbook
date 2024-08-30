@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Tenor+Sans&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,6 +81,7 @@
     @apply h-full;
   }
   body {
+    font-family: "Tenor Sans", sans-serif;
     @apply bg-background text-foreground h-full;
     font-feature-settings:
       "rlig" 1,
@@ -85,13 +89,7 @@
   }
   .background-gradient {
     background-color: #fff;
-    background-image: radial-gradient(
-        at 21% 11%,
-        rgba(186, 186, 233, 0.53) 0,
-        transparent 50%
-      ),
-      radial-gradient(at 85% 0, hsla(46, 57%, 78%, 0.52) 0, transparent 50%),
-      radial-gradient(at 91% 36%, rgba(194, 213, 255, 0.68) 0, transparent 50%),
-      radial-gradient(at 8% 40%, rgba(251, 218, 239, 0.46) 0, transparent 50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                  url("https://res.cloudinary.com/dngcmvmez/image/upload/v1724968250/temple_itdcjs.jpg");
   }
 }

@@ -26,18 +26,18 @@ def get_chat_engine(filters=None, params=None):
 
     """
     
-    citation_prompt="""You are referencing information from a knowledge base with specific metadata, such as node ID, file name, and page number. Include the appropriate citation for each referenced sentence or paragraph.
+    # citation_prompt="""You are referencing information from a knowledge base with specific metadata, such as node ID, file name, and page number. Include the appropriate citation for each referenced sentence or paragraph.
 
-    Steps for Citing:
-    1. Extract the URL source for the referenced document.
-    2. Include this URL at the end of each relevant sentence or paragraph.
+    # Steps for Citing:
+    # 1. Extract the URL source for the referenced document.
+    # 2. Include this URL at the end of each relevant sentence or paragraph.
 
-    Example:
-    For information about priesthood ordinances, cite as:
-    URL Source: https://www.churchofjesuschrist.org/study/manual/general-handbook/18-priesthood-ordinances-and-blessings
-    """
+    # Example:
+    # For information about priesthood ordinances, cite as:
+    # URL Source: https://www.churchofjesuschrist.org/study/manual/general-handbook/18-priesthood-ordinances-and-blessings
+    # """
 
-    # citation_prompt = os.getenv("SYSTEM_CITATION_PROMPT", None)
+    citation_prompt = """Point the chapter or chapters where you get that information"""
     top_k = int(os.getenv("TOP_K", 0))
 
     node_postprocessors = []
